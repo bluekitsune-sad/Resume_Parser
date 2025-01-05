@@ -1,7 +1,10 @@
-from pdfminer.high_level import extract_text
 # !pip install pdfminer.six
 # !pip install spacy
 
+import pdfminer
+import re
+from pdfminer.high_level import extract_text
+import spacy
 
 def extract_text_from_pdf(pdf_path):
     return extract_text(pdf_path)
@@ -10,8 +13,6 @@ def extract_text_from_pdf(pdf_path):
 if __name__ == '__main__':
     print(extract_text_from_pdf(r"C:\Users\HuTa0710\Downloads\Compressed\Resume-Parser-using-Python-main\Resume-Parser-using-Python-main\Untitled-resume.pdf"))
 
-import pdfminer
-import re
 
 
 def extract_text_from_pdf(pdf_path):
@@ -175,7 +176,7 @@ if __name__ == '__main__':
     else:
         print("No education information found")
 
-import spacy
+
 
 nlp = spacy.load('en_core_web_sm')
 
